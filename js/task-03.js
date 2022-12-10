@@ -20,6 +20,7 @@ const listImgElStyle = document.querySelector(".js-gallery");
 listImgElStyle.style.listStyle = "none";
 
 const itemEl = images.map(
-  (element) => `<li><img src=${element.url} alt=${element.alt}></img></li>`
+  (element) =>
+    `<li><img src=${element.url} alt=${element.alt} width = '360px'></img></li>`
 );
 listImgEl.insertAdjacentHTML("afterbegin", itemEl);
