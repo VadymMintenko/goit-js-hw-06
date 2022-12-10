@@ -15,19 +15,11 @@ const images = [
 
 const listImgEl = document.querySelector(".gallery");
 console.log(listImgEl);
+listImgEl.classList.add("js-gallery");
+const listImgElStyle = document.querySelector(".js-gallery");
+listImgElStyle.style.listStyle = "none";
 
 const itemEl = images.map(
   (element) => `<li><img src=${element.url} alt=${element.alt}></img></li>`
 );
 listImgEl.insertAdjacentHTML("afterbegin", itemEl);
-
-// чи можна зробити таким методом?
-
-// images.forEach(function (element) {
-//   const itemEl = document.createElement("li");
-//   const image = document.createElement("img");
-//   image.src = element.url;
-//   image.alt = element.alt;
-//   itemEl.appendChild(image);
-//   listImgEl.appendChild(itemEl);
-// });
