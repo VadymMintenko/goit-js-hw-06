@@ -11,9 +11,8 @@ function onSubmitForm(event) {
     password,
   };
   console.log(formData);
+  form.reset();
   if (!formData.email || !formData.password) {
     alert("Заповніть всі поля");
-  } else {
-    form.reset();
   }
 }
